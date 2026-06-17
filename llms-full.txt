@@ -1,0 +1,52 @@
+# Agent Immune System Full Context
+
+Agent Immune System is an instruction-health governance skill for AI agent workspaces.
+
+It reviews `AGENTS.md`, `CLAUDE.md`, `SKILL.md`, project instructions, review findings, postmortems, and session learnings to decide which lessons deserve active instructions, which should stay as memory, and which bloated or conflicting rules should be pruned.
+
+## Core Principle
+
+A mistake is not automatically a rule. A mistake is an antigen.
+
+## Workflow
+
+1. Identify the evidence.
+2. Classify recurrence, severity, generality, and coverage.
+3. Detect prompt bloat, duplicate rules, stale rules, conflicts, and autoimmune behavior.
+4. Score promotion cost versus future-error reduction.
+5. Route the finding to the smallest sufficient memory destination.
+6. Produce a human-reviewable proposal.
+
+## Memory Routes
+
+- tolerate
+- temporary watchlist
+- incident memory
+- reference antibody
+- active instruction candidate
+- regeneration candidate
+- demotion
+- deletion
+
+## Safety
+
+Do not silently edit active instruction files. Do not harvest secrets, keychains, shell history, credentials, or private tokens. Prefer proposal-first review unless the user explicitly asks for edits.
+
+## Trigger Phrases
+
+- My AGENTS.md is bloated.
+- Our CLAUDE.md is too long.
+- The agent keeps following stale instructions.
+- We keep adding rules after every mistake.
+- Our prompt has become impossible to maintain.
+- The agent instructions contradict each other.
+- Can you clean up my agent instructions?
+- Can you prune our AGENTS.md?
+- The system prompt is full of scar tissue.
+- We need instruction hygiene.
+- Should this postmortem become a permanent rule?
+- The agent keeps asking for permission because of old rules.
+- Our skills and global instructions overlap.
+- We need a prompt health audit.
+- The agent is overcorrecting from past failures.
+- Our instruction file has too many exceptions.

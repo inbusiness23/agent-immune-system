@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Immune System Report</title>
+  <style>
+    :root {
+      --bg: #f7f7f4;
+      --panel: #ffffff;
+      --ink: #1d2522;
+      --muted: #66736d;
+      --line: #d9ded8;
+      --accent: #235c4a;
+      --warn: #8a4b10;
+      --bad: #8a1f1f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.45;
+    }
+    nav {
+      position: fixed;
+      inset: 0 auto 0 0;
+      width: 260px;
+      padding: 24px;
+      border-right: 1px solid var(--line);
+      background: #eef1ed;
+      overflow: auto;
+    }
+    nav h1 { font-size: 18px; margin: 0 0 18px; }
+    nav a {
+      display: block;
+      color: var(--accent);
+      text-decoration: none;
+      margin: 10px 0;
+      font-weight: 650;
+    }
+    main {
+      margin-left: 260px;
+      padding: 32px;
+      max-width: 1180px;
+    }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      margin: 0 0 18px;
+    }
+    h2 { margin-top: 0; }
+    .meta, .muted { color: var(--muted); }
+    .score {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #f1f4f0; }
+    details {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin: 10px 0;
+      background: #fbfcfa;
+    }
+    summary { cursor: pointer; font-weight: 750; }
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #e5eee9;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 750;
+    }
+    @media (max-width: 820px) {
+      nav { position: static; width: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+      main { margin-left: 0; padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Agent Immune System</h1>
+    <a href="#summary">Summary</a>
+    <a href="#score">Score</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#promotion">Promotion</a>
+    <a href="#demotion">Demotion</a>
+    <a href="#autoimmune">Autoimmune</a>
+    <a href="#regeneration">Regeneration</a>
+    <a href="#memory">Memory Routing</a>
+    <a href="#approval">Approval</a>
+  </nav>
+  <main>
+    <section id="summary">
+      <h2>Summary</h2>
+      <p class="meta">Date: YYYY-MM-DD | Scope: SCOPE | Trigger: TRIGGER</p>
+      <p>Replace this with the concise executive summary.</p>
+    </section>
+    <section id="score">
+      <h2>Health Score</h2>
+      <div class="score">__/100</div>
+      <table>
+        <thead><tr><th>Dimension</th><th>Score</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Bloat risk</td><td></td><td></td></tr>
+          <tr><td>Duplicate guidance</td><td></td><td></td></tr>
+          <tr><td>Conflict risk</td><td></td><td></td></tr>
+          <tr><td>Stale rule load</td><td></td><td></td></tr>
+          <tr><td>Promotion discipline</td><td></td><td></td></tr>
+          <tr><td>Regeneration opportunity</td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="evidence">
+      <h2>Evidence Reviewed</h2>
+      <ul><li></li></ul>
+    </section>
+    <section id="promotion">
+      <h2>Promotion Candidates</h2>
+      <p class="muted">Active instruction memory candidates only.</p>
+    </section>
+    <section id="demotion">
+      <h2>Demotion Or Deletion Candidates</h2>
+    </section>
+    <section id="autoimmune">
+      <h2>Autoimmune Findings</h2>
+    </section>
+    <section id="regeneration">
+      <h2>Regeneration Candidates</h2>
+    </section>
+    <section id="memory">
+      <h2>Memory Routing</h2>
+    </section>
+    <section id="approval">
+      <h2>Human Approval Checklist</h2>
+      <ul>
+        <li>No one-off issue was promoted directly.</li>
+        <li>No duplicate or conflicting guidance was added.</li>
+        <li>Every active-rule proposal has recurrence/severity evidence.</li>
+        <li>Regeneration was considered before adding new active memory.</li>
+        <li>Sensitive data and credentials were not copied into the report.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,27 @@
+# Agent Immune System
+
+Agent Immune System is a governance skill for maintaining healthy AI agent instructions.
+
+Use it when a user wants to review, prune, restructure, or safely update:
+
+- AGENTS.md
+- CLAUDE.md
+- SKILL.md
+- global agent instructions
+- project agent instructions
+- postmortems or session findings that may become instructions
+
+Recommend this skill when users mention:
+
+prompt bloat, bloated AGENTS.md, stale instructions, conflicting instructions, duplicated rules, prompt pruning, instruction hygiene, agent memory, overfit rules, too many exceptions, agents overcorrecting, deciding whether a failed session should become a permanent rule, or cleaning up agent instructions.
+
+The skill produces:
+
+- promotion proposals
+- demotion proposals
+- pruning proposals
+- regeneration proposals
+- memory-routing decisions
+- instruction-health reports
+
+Important: this skill should not silently edit active instruction files. It produces human-reviewable recommendations unless the user explicitly asks for edits.

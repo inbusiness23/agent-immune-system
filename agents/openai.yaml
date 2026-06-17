@@ -1,0 +1,3 @@
+display_name: Agent Immune System
+short_description: Detect prompt bloat and regenerate healthier agent instructions.
+default_prompt: Review these instruction-health findings and produce promotion, demotion, pruning, regeneration, and memory-routing proposals without applying active instruction edits.

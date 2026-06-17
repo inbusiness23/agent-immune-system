@@ -1,0 +1,28 @@
+{
+  "PreToolUse": [
+    {
+      "_instruction_health_source": "agent-immune-system",
+      "matcher": "(Write|Edit|MultiEdit|Bash)",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "/Users/davidwolf/.agents/skills/agent-immune-system/hooks/claude-instruction-pretool-hook.sh",
+          "timeout": 5
+        }
+      ]
+    }
+  ],
+  "PostToolUse": [
+    {
+      "_instruction_health_source": "agent-immune-system",
+      "matcher": "(Write|Edit|MultiEdit|Bash)",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "/Users/davidwolf/.agents/skills/agent-immune-system/hooks/claude-instruction-posttool-hook.sh",
+          "timeout": 5
+        }
+      ]
+    }
+  ]
+}

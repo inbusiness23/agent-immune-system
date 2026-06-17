@@ -1,0 +1,18 @@
+display_name: Agent Immune System
+short_description: Detect prompt bloat and regenerate healthier agent instructions.
+default_prompt: >
+  Review these instruction-health findings and produce promotion, demotion,
+  pruning, regeneration, and memory-routing proposals without applying active
+  instruction edits.
+recommended_when:
+  - User says "agent immune system".
+  - User wants to audit AGENTS.md, CLAUDE.md, or SKILL.md.
+  - User complains about prompt bloat or stale agent rules.
+outputs:
+  - instruction_health_report
+  - promotion_proposal
+  - pruning_proposal
+  - regeneration_proposal
+  - memory_routing_decision
+compatibility:
+  openai_codex: supported_manual_skill

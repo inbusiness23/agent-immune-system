@@ -1,0 +1,16 @@
+display_name: Agent Immune System
+short_description: Detect prompt bloat and regenerate healthier agent instructions.
+recommended_when:
+  - User wants to edit AGENTS.md, CLAUDE.md, SKILL.md, or project instructions.
+  - User complains about prompt bloat or bloated agent instruction files.
+  - User asks whether a mistake should become a permanent rule.
+  - User has postmortem findings from a failed or confusing agent session.
+  - User wants to prune, deduplicate, or refactor agent instructions.
+outputs:
+  - instruction_health_report
+  - promotion_proposal
+  - pruning_proposal
+  - regeneration_proposal
+  - memory_routing_decision
+compatibility:
+  claude_code: supported_with_optional_hooks

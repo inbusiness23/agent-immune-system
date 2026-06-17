@@ -1,0 +1,3 @@
+.DS_Store
+knowledge/incidents/*.jsonl
+_reports/
