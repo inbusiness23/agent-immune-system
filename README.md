@@ -4,6 +4,11 @@ Detect prompt bloat, prevent rule autoimmunity, and regenerate healthier agent i
 
 Agent Immune System audits `AGENTS.md`, `CLAUDE.md`, `SKILL.md`, and project instruction files for duplicated rules, contradictions, stale assumptions, exception chains, and overfit guidance.
 
+Launch demo:
+
+- [Screenflow chat demo](assets/screenflow/chat-demo.html)
+- [HyperFlow render brief](launch/hyperflow-screenflow-brief.md)
+
 ```text
 Before: every painful agent mistake becomes another permanent rule.
 After: lessons are tolerated, watched, archived, promoted, pruned, or regenerated proportionally.

@@ -1,0 +1,50 @@
+{
+  "title": "Agent Immune System Screenflow Chat",
+  "duration_seconds": 62,
+  "format": "16:9",
+  "style": "clean developer-tool screenflow with chat, diff panels, and decision badges",
+  "beats": [
+    {
+      "time": "0:00",
+      "label": "Hook",
+      "user": "My AGENTS.md is huge, contradictory, and every failed session turns into another rule.",
+      "agent": "Running Agent Immune System. I will audit for prompt bloat, stale rules, duplicated guidance, autoimmunity, and regeneration opportunities.",
+      "visual": "Chat window opens beside a bloated markdown file. Badge: Prompt bloat detected."
+    },
+    {
+      "time": "0:09",
+      "label": "Watchlist",
+      "user": "The agent forgot browser proof once. Should I add a permanent global rule?",
+      "agent": "Decision: watchlist. One missed browser-proof check is evidence, not permanent memory. Track it for the next 3 visual-review sessions and promote only if it recurs.",
+      "visual": "Decision ladder highlights Watchlist. Text: Temporary inflammation, not scar tissue."
+    },
+    {
+      "time": "0:20",
+      "label": "Prune",
+      "user": "Agents keep asking permission even after I approved the work.",
+      "agent": "Finding: old incident-specific rules now suppress safe investigation. Recommendation: demote the narrow rules into dormant memory and keep active instructions proportional.",
+      "visual": "Before panel shows repeated permission rules. After panel shows demotion cards."
+    },
+    {
+      "time": "0:32",
+      "label": "Regenerate",
+      "user": "I have five separate git safety rules. They all sound important.",
+      "agent": "Regeneration candidate. Replace five overlapping rules with one durable principle: before editing, confirm the worktree is safe: correct branch, writable metadata, no unrelated dirty changes, and no active writer collision.",
+      "visual": "Five rule cards collapse into one principle card. Badge: Regenerate, don't scar."
+    },
+    {
+      "time": "0:45",
+      "label": "Autoimmune Rule",
+      "user": "What about: never run commands without asking first?",
+      "agent": "Autoimmune finding. This blocks safe read-only discovery. Rewrite it: proceed with safe read-only investigation; ask before destructive commands, external writes, credential access, or irreversible actions.",
+      "visual": "Red rule turns yellow, then green rewrite. Badge: Protection without paralysis."
+    },
+    {
+      "time": "0:56",
+      "label": "Close",
+      "user": "So it does not just shorten prompts?",
+      "agent": "Right. It routes lessons to the smallest useful memory surface: tolerate, watchlist, incident memory, reference antibody, active instruction, pruning, or regeneration. Proposal-first. Human approval before active edits.",
+      "visual": "Final product card with tagline: Detect prompt bloat. Prevent rule autoimmunity. Regenerate healthier agent instructions."
+    }
+  ]
+}

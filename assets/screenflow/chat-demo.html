@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Immune System Screenflow Chat</title>
+  <style>
+    :root {
+      --ink: #14211c;
+      --muted: #60706a;
+      --line: #d7ddd8;
+      --bg: #eef2ee;
+      --panel: #ffffff;
+      --code: #101615;
+      --code-line: #26332f;
+      --green: #1f6b4f;
+      --green-soft: #ddf0e8;
+      --yellow: #8a5a12;
+      --yellow-soft: #fff0cf;
+      --red: #8a2c2c;
+      --red-soft: #fde3e0;
+      --blue: #265a84;
+      --blue-soft: #dfeefa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at 20% 10%, #ffffff 0, var(--bg) 38%, #dfe7e1 100%);
+    }
+    .stage {
+      width: min(1200px, 100vw);
+      aspect-ratio: 16 / 9;
+      margin: 0 auto;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 20px;
+    }
+    .editor,
+    .chat {
+      border: 1px solid rgba(20, 33, 28, 0.12);
+      border-radius: 8px;
+      box-shadow: 0 24px 70px rgba(20, 33, 28, 0.12);
+      overflow: hidden;
+    }
+    .editor {
+      background: var(--code);
+      color: #d8efe5;
+      display: flex;
+      flex-direction: column;
+    }
+    .bar {
+      height: 38px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: #91aaa0;
+      font-size: 13px;
+      font-weight: 650;
+    }
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #e66767;
+    }
+    .dot:nth-child(2) { background: #e9bd56; }
+    .dot:nth-child(3) { background: #64c77a; margin-right: 10px; }
+    .code {
+      padding: 18px;
+      font: 15px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      overflow: hidden;
+    }
+    .code-line {
+      padding: 4px 8px;
+      border-radius: 5px;
+      margin: 4px 0;
+      background: rgba(255,255,255,0.02);
+    }
+    .code-line.warn { background: rgba(255, 202, 90, 0.14); color: #ffe1a1; }
+    .code-line.bad { background: rgba(255, 121, 121, 0.13); color: #ffc1bd; }
+    .code-line.good { background: rgba(107, 210, 150, 0.14); color: #bdf3d0; }
+    .chat {
+      background: rgba(255,255,255,0.92);
+      display: flex;
+      flex-direction: column;
+    }
+    .chat-head {
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+    .tagline {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .score {
+      min-width: 86px;
+      text-align: center;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-weight: 850;
+    }
+    .messages {
+      padding: 18px 20px;
+      display: grid;
+      gap: 12px;
+      overflow: hidden;
+    }
+    .message {
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 16px;
+      line-height: 1.38;
+      border: 1px solid var(--line);
+    }
+    .user {
+      background: #f7f9f7;
+      margin-left: 48px;
+    }
+    .agent {
+      background: #eef8f3;
+      border-color: #c6e2d5;
+      margin-right: 38px;
+    }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0 20px 16px;
+    }
+    .badge {
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      border: 1px solid transparent;
+    }
+    .watch { color: var(--blue); background: var(--blue-soft); border-color: #b8d7ee; }
+    .prune { color: var(--yellow); background: var(--yellow-soft); border-color: #ebd39b; }
+    .regen { color: var(--green); background: var(--green-soft); border-color: #b9ddcd; }
+    .auto { color: var(--red); background: var(--red-soft); border-color: #f4beb8; }
+    .approve { color: #38424b; background: #eceff1; border-color: #d4d9dc; }
+    .decision {
+      margin: auto 20px 20px;
+      padding: 16px;
+      border-radius: 8px;
+      background: #f8faf8;
+      border: 1px solid var(--line);
+    }
+    .decision h2 {
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+    .decision p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .pulse { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse {
+      0%, 100% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(-3px); opacity: 0.9; }
+    }
+    @media (max-width: 760px) {
+      .stage {
+        aspect-ratio: auto;
+        min-height: 100vh;
+        grid-template-columns: 1fr;
+        padding: 14px;
+      }
+      .user, .agent { margin-left: 0; margin-right: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="stage" aria-label="Agent Immune System chat screenflow">
+    <section class="editor" aria-label="Bloated instruction file before and after">
+      <div class="bar">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        AGENTS.md
+      </div>
+      <div class="code">
+        <div class="code-line bad">- Never run commands without asking first.</div>
+        <div class="code-line warn">- Always check the branch before editing.</div>
+        <div class="code-line warn">- Always verify git status before editing.</div>
+        <div class="code-line warn">- Do not edit main.</div>
+        <div class="code-line warn">- Stop if worktree is dirty.</div>
+        <div class="code-line warn">- Never touch unrelated files.</div>
+        <br>
+        <div class="code-line good">+ Proceed with safe read-only discovery.</div>
+        <div class="code-line good">+ Ask before destructive commands, external writes, credential access, or irreversible actions.</div>
+        <div class="code-line good">+ Before editing, confirm the worktree is safe: correct branch, writable metadata, no unrelated dirty changes, and no active writer collision.</div>
+      </div>
+    </section>
+
+    <section class="chat" aria-label="Chat using Agent Immune System">
+      <div class="chat-head">
+        <div>
+          <div class="title">Agent Immune System</div>
+          <div class="tagline">Detect prompt bloat. Prevent rule autoimmunity. Regenerate healthier instructions.</div>
+        </div>
+        <div class="score pulse">74/100</div>
+      </div>
+
+      <div class="messages">
+        <div class="message user">My AGENTS.md is huge, contradictory, and every failed session turns into another rule.</div>
+        <div class="message agent">Running audit. I found duplicate git safety rules, one autoimmune command rule, and a browser-proof lesson that should be watched before promotion.</div>
+        <div class="message user">Should the missed browser proof become a global rule?</div>
+        <div class="message agent">No. Decision: watchlist. Track it for 3 visual-review sessions and promote only if it recurs.</div>
+        <div class="message user">What about all these git safety rules?</div>
+        <div class="message agent">Regeneration candidate. Replace five overlapping rules with one durable worktree-safety principle.</div>
+      </div>
+
+      <div class="badge-row">
+        <span class="badge watch">Watchlist</span>
+        <span class="badge prune">Prune</span>
+        <span class="badge regen">Regenerate</span>
+        <span class="badge auto">Autoimmune Finding</span>
+        <span class="badge approve">Human Approval Required</span>
+      </div>
+
+      <div class="decision">
+        <h2>Proposal-first by default</h2>
+        <p>The skill recommends promotion, demotion, pruning, or regeneration. It does not silently rewrite active instructions.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
