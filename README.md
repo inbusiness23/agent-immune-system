@@ -6,8 +6,9 @@ Agent Immune System audits `AGENTS.md`, `CLAUDE.md`, `SKILL.md`, and project ins
 
 Launch demo:
 
-- [Screenflow chat demo](assets/screenflow/chat-demo.html)
-- [HyperFlow render brief](launch/hyperflow-screenflow-brief.md)
+- [Rendered HyperFrames screenflow MP4](assets/video/agent-immune-system-screenflow.mp4)
+- [HyperFrames composition source](assets/hyperframes/agent-immune-screenflow/index.html)
+- [Static screenflow chat demo](assets/screenflow/chat-demo.html)
 
 ```text
 Before: every painful agent mistake becomes another permanent rule.
