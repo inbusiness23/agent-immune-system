@@ -6,12 +6,16 @@ Agent Immune System audits `AGENTS.md`, `CLAUDE.md`, `SKILL.md`, and project ins
 
 Launch demo:
 
+- [Rendered stack-placement launch MP4](assets/video/agent-immune-system-stack-placement.mp4)
+- [HyperFrames stack-placement source](assets/hyperframes/agent-immune-stack-placement/index.html)
 - [Rendered Codex workflow MP4](assets/video/agent-immune-codex-workflow.mp4)
-- [HyperFrames workflow source](assets/hyperframes/agent-immune-codex-workflow/index.html)
+- [HyperFrames Codex workflow source](assets/hyperframes/agent-immune-codex-workflow/index.html)
 - [Workflow fixture files](demo/workflow/)
 - [Static screenflow chat demo](assets/screenflow/chat-demo.html)
 
-The workflow demo shows a user running Agent Immune System inside a Codex chat, reviewing findings, applying the proposed patch, and comparing before/after code completion output. The 40% faster frame is based on the included deterministic demo fixture, not a universal performance guarantee.
+The primary launch cut shows where Agent Immune System fits in the developer-agent loop: above `AGENTS.md`, `CLAUDE.md`, skills, project instructions, postmortems, and review findings. It emphasizes that durable instruction health requires subtraction, demotion, pruning, and regeneration, not just adding more rules.
+
+The Codex workflow demo shows a user running Agent Immune System inside a Codex chat, reviewing findings, applying the proposed patch, and comparing before/after code completion output. The 40% faster frame is based on the included deterministic demo fixture, not a universal performance guarantee.
 
 ```text
 Before: every painful agent mistake becomes another permanent rule.
