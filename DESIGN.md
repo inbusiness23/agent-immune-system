@@ -61,6 +61,10 @@ Motion should feel like a polished product launch demo, not a slideshow. Use qui
 - Use side-by-side timing bars for the before/after benchmark.
 - Respect reduced-motion alternatives in any HTML preview surface.
 
+## Audio
+
+Launch cuts should not be silent. Use an upbeat but restrained electronic background bed under a clear, assertive voiceover. The music should create forward motion without competing with narration. The voiceover should explain the core positioning: Agent Immune System is not another rules file, it is the instruction-health filter between postmortems, memory, skills, hooks, and active instructions.
+
 ## What Not To Do
 
 - Do not use floating generic SaaS cards or bare app windows when a laptop/phone mockup would make the workflow feel real.
@@ -68,3 +72,4 @@ Motion should feel like a polished product launch demo, not a slideshow. Use qui
 - Do not fake a complex product dashboard when a realistic Codex workflow is the story.
 - Do not make the IDE cycle so long that it dilutes the core Codex demo.
 - Do not present the 40% result as a universal claim.
+- Do not rely on silent text-only scenes for the main launch cut.

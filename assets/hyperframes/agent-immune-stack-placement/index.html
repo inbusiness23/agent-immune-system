@@ -617,69 +617,122 @@
         font-size: 17px;
         font-weight: 950;
       }
-      .stack-loop {
+      .kinetic-stack {
         position: absolute;
-        left: 92px;
-        top: 326px;
-        width: 1020px;
-        height: 620px;
+        left: 72px;
+        right: 72px;
+        top: 314px;
+        height: 632px;
       }
-      .layer-card {
+      .framework-rack {
         position: absolute;
-        right: 84px;
-        top: 326px;
-        width: 675px;
-        height: 590px;
+        left: 0;
+        top: 20px;
+        width: 720px;
+        display: grid;
+        gap: 12px;
+      }
+      .framework-word {
+        min-height: 72px;
         border-radius: 18px;
-        border: 1px solid #4b566a;
-        background: #1d222c;
-        padding: 28px;
-      }
-      .layer-title {
+        border: 1px solid rgba(96, 123, 255, 0.44);
+        background: rgba(59, 91, 219, 0.16);
         color: #fff7e8;
-        font-size: 30px;
-        font-weight: 950;
-        margin-bottom: 18px;
-      }
-      .layer-row {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        min-height: 58px;
-        border-bottom: 1px solid #364152;
-        color: #f4f0e7;
-        font-size: 22px;
-        font-weight: 820;
-      }
-      .immune-block {
-        margin-top: 22px;
-        border-radius: 14px;
-        background: #1ed7c2;
-        color: #10201f;
-        padding: 20px 22px;
-        font-size: 30px;
-        line-height: 1.05;
+        padding: 0 24px;
+        font-size: 54px;
+        line-height: 1;
         font-weight: 950;
       }
-      .speed-row {
-        margin-top: 18px;
+      .framework-word small {
+        margin-left: auto;
+        color: #c8ccd7;
+        font-size: 18px;
+        font-weight: 850;
+      }
+      .feed-rail {
+        position: absolute;
+        left: 792px;
+        top: 24px;
+        width: 408px;
+        height: 462px;
+        border-left: 3px solid #f5b84b;
+      }
+      .feed-token {
+        position: absolute;
+        left: 24px;
+        width: 330px;
+        min-height: 58px;
+        border-radius: 14px;
+        border: 1px solid rgba(245, 184, 75, 0.62);
+        background: rgba(245, 184, 75, 0.12);
+        color: #ffd077;
+        display: flex;
+        align-items: center;
+        padding: 0 18px;
+        font-size: 30px;
+        font-weight: 950;
+      }
+      .immune-type {
+        position: absolute;
+        right: 0;
+        top: 126px;
+        width: 560px;
+        min-height: 210px;
+        border-radius: 28px;
+        background: #1ed7c2;
+        color: #10201f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 24px;
+        font-size: 64px;
+        line-height: 0.92;
+        font-weight: 950;
+        box-shadow: 0 28px 70px rgba(30, 215, 194, 0.22);
+      }
+      .output-stack {
+        position: absolute;
+        right: 30px;
+        bottom: 42px;
+        width: 500px;
+        display: grid;
+        gap: 12px;
+      }
+      .output-word {
+        min-height: 58px;
+        border-radius: 14px;
+        background: #fff7e8;
+        color: #151820;
+        display: flex;
+        align-items: center;
+        padding: 0 18px;
+        font-size: 28px;
+        font-weight: 950;
+      }
+      .velocity-lines {
+        position: absolute;
+        left: 760px;
+        right: 610px;
+        top: 512px;
         display: grid;
         gap: 10px;
       }
-      .speed-bar {
-        height: 18px;
+      .velocity-line {
+        height: 10px;
         border-radius: 999px;
-        background: rgba(255, 92, 69, 0.22);
-        overflow: hidden;
-      }
-      .speed-fill {
-        height: 100%;
-        width: 78%;
-        background: #f5b84b;
-      }
-      .speed-fill.fast-fill {
-        width: 44%;
         background: #1ed7c2;
+        transform-origin: left center;
+      }
+      .velocity-line:nth-child(2) {
+        width: 74%;
+        background: #607bff;
+      }
+      .velocity-line:nth-child(3) {
+        width: 52%;
+        background: #fff7e8;
       }
       .tool-grid {
         position: absolute;
@@ -951,6 +1004,8 @@
   </head>
   <body>
     <div id="root" data-composition-id="main" data-start="0" data-duration="88" data-width="1920" data-height="1080">
+      <audio id="music-bed" data-start="0" data-duration="88" data-track-index="20" src="audio/background-upbeat.m4a" data-volume="0.18"></audio>
+      <audio id="voiceover" data-start="0.25" data-duration="75" data-track-index="21" src="audio/voiceover.m4a" data-volume="1"></audio>
       <section id="scene1" class="scene">
         <div class="grid-bg"></div>
         <div class="topbar"><span class="brand">Agent Immune System</span><span>instruction health layer</span></div>
@@ -1108,43 +1163,33 @@
         <div class="grid-bg"></div>
         <div class="topbar"><span class="brand">Where it fits</span><span>above the loop, not instead of the loop</span></div>
         <h2 id="s4-title" class="stage-title">It sits on the instruction-health layer.</h2>
-        <p id="s4-subtitle" class="stage-subtitle">GStack, GSD, Codex, Claude Code, Cursor, terminal: same learning layer, same scar-tissue risk.</p>
-        <div id="s4-loop" class="stack-loop">
-          <div class="loop-node fast" style="left:410px;top:0">Plan</div>
-          <div class="loop-node fast" style="left:746px;top:170px">Execute</div>
-          <div class="loop-node fast" style="left:674px;top:454px">Review</div>
-          <div class="loop-node fast" style="left:132px;top:454px">Test</div>
-          <div class="loop-node fast" style="left:58px;top:170px">Ship</div>
-          <div class="loop-node fast" style="left:410px;top:288px">Learn</div>
-          <div class="pill mono" style="position:absolute;left:210px;top:84px">GStack</div>
-          <div class="pill mono" style="position:absolute;left:684px;top:84px">GSD</div>
-          <div class="pill mono" style="position:absolute;left:318px;top:572px">developer loop</div>
-        </div>
-        <div id="s4-layer" class="layer-card">
-          <div class="layer-title">Instruction inputs feeding the loop</div>
-          <div class="layer-row"><span>Postmortems</span><span class="amber">unfiltered</span></div>
-          <div class="layer-row"><span>Memory reports</span><span class="amber">stale</span></div>
-          <div class="layer-row"><span>AGENTS.md / CLAUDE.md</span><span class="amber">bloated</span></div>
-          <div class="layer-row"><span>skills/ and hooks/</span><span class="amber">duplicated</span></div>
-          <div id="immune-block" class="immune-block">AGENT IMMUNE SYSTEM</div>
-          <div class="speed-row">
-            <div class="speed-bar"><div class="speed-fill"></div></div>
-            <div class="speed-bar"><div class="speed-fill fast-fill"></div></div>
+        <p id="s4-subtitle" class="stage-subtitle">GSD, GStack, Codex, Claude Code, Cursor, terminal: different loops, same instruction-health bottleneck.</p>
+        <div id="s4-kinetic" class="kinetic-stack">
+          <div class="framework-rack">
+            <div class="framework-word">GSD <small>plan -> work -> verify</small></div>
+            <div class="framework-word">GStack <small>spec -> slice -> ship</small></div>
+            <div class="framework-word">Codex <small>chat -> edit -> test</small></div>
+            <div class="framework-word">Claude Code <small>skill -> hook -> review</small></div>
+            <div class="framework-word">Cursor <small>agent -> diff -> demo</small></div>
           </div>
-        </div>
-        <div id="s4-glyph" class="stack-glyph">
-          <svg viewBox="0 0 556 132" aria-label="instruction stack placement diagram">
-            <rect x="4" y="18" width="150" height="44" rx="12" fill="#fff7e8"></rect>
-            <rect x="4" y="72" width="150" height="44" rx="12" fill="#fff7e8"></rect>
-            <text x="79" y="47" text-anchor="middle" font-size="18" font-weight="900" fill="#151820">Postmortem</text>
-            <text x="79" y="101" text-anchor="middle" font-size="18" font-weight="900" fill="#151820">Review</text>
-            <path d="M170 66h86" stroke="#607bff" stroke-width="6" stroke-linecap="round"></path>
-            <rect x="274" y="24" width="182" height="84" rx="18" fill="#1ed7c2"></rect>
-            <text x="365" y="60" text-anchor="middle" font-size="20" font-weight="950" fill="#10201f">AGENT IMMUNE</text>
-            <text x="365" y="86" text-anchor="middle" font-size="20" font-weight="950" fill="#10201f">SYSTEM</text>
-            <path d="M468 66h64" stroke="#1ed7c2" stroke-width="6" stroke-linecap="round"></path>
-            <circle cx="536" cy="66" r="12" fill="#fff7e8"></circle>
-          </svg>
+          <div class="feed-rail">
+            <div class="feed-token" style="top:0">POSTMORTEM</div>
+            <div class="feed-token" style="top:86px">MEMORY</div>
+            <div class="feed-token" style="top:172px">RULES</div>
+            <div class="feed-token" style="top:258px">SKILLS</div>
+            <div class="feed-token" style="top:344px">HOOKS</div>
+          </div>
+          <div id="immune-block" class="immune-type">AGENT IMMUNE SYSTEM</div>
+          <div class="velocity-lines">
+            <div class="velocity-line"></div>
+            <div class="velocity-line"></div>
+            <div class="velocity-line"></div>
+          </div>
+          <div class="output-stack">
+            <div class="output-word">clean active instructions</div>
+            <div class="output-word">dormant incident memory</div>
+            <div class="output-word">faster developer-agent loop</div>
+          </div>
         </div>
       </section>
 
@@ -1311,14 +1356,14 @@
 
       blurTo("#scene3", "#scene4", 35.5);
       enterTitle("#scene4", 35.5);
-      tl.from("#s4-loop .loop-node", { opacity: 0, scale: 0.9, stagger: 0.08, duration: 0.4, ease: "back.out(1.2)" }, 37.0);
-      tl.from("#s4-loop .pill", { opacity: 0, y: 12, stagger: 0.12, duration: 0.32, ease: "power2.out" }, 37.8);
-      tl.from("#s4-layer", { opacity: 0, x: 42, duration: 0.62, ease: "power4.out" }, 38.4);
-      tl.from("#s4-layer .layer-row", { opacity: 0, x: 20, stagger: 0.12, duration: 0.28, ease: "power2.out" }, 39.0);
-      tl.from("#immune-block", { opacity: 0, y: -48, scale: 1.04, duration: 0.56, ease: "expo.out" }, 41.0);
-      tl.from("#s4-glyph", { opacity: 0, y: 22, duration: 0.46, ease: "power3.out" }, 41.15);
-      tl.to("#s4-loop .loop-node", { borderColor: "#1ed7c2", backgroundColor: "#153933", color: "#d9fffa", duration: 0.45, stagger: 0.04, ease: "power2.out" }, 41.4);
-      tl.from("#s4-layer .speed-bar", { opacity: 0, x: 20, stagger: 0.15, duration: 0.35, ease: "power2.out" }, 42.2);
+      tl.from("#s4-kinetic .framework-word", { opacity: 0, x: -72, scale: 0.96, stagger: 0.09, duration: 0.42, ease: "expo.out" }, 36.95);
+      tl.from("#s4-kinetic .feed-rail", { opacity: 0, scaleY: 0.1, transformOrigin: "top center", duration: 0.42, ease: "power4.out" }, 37.7);
+      tl.from("#s4-kinetic .feed-token", { opacity: 0, x: 46, stagger: 0.1, duration: 0.28, ease: "back.out(1.5)" }, 38.05);
+      tl.from("#immune-block", { opacity: 0, y: -64, scale: 1.08, duration: 0.5, ease: "expo.out" }, 39.4);
+      tl.to("#s4-kinetic .feed-token", { x: 264, opacity: 0.32, duration: 0.5, stagger: 0.055, ease: "power3.inOut" }, 40.2);
+      tl.from("#s4-kinetic .velocity-line", { scaleX: 0, opacity: 0, stagger: 0.1, duration: 0.3, ease: "power4.out" }, 40.8);
+      tl.from("#s4-kinetic .output-word", { opacity: 0, x: 42, stagger: 0.16, duration: 0.34, ease: "power3.out" }, 41.4);
+      tl.to("#s4-kinetic .framework-word", { borderColor: "#1ed7c2", duration: 0.28, stagger: 0.045, ease: "sine.out" }, 42.2);
 
       blurTo("#scene4", "#scene5", 49.5);
       enterTitle("#scene5", 49.5);
