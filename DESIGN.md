@@ -2,23 +2,24 @@
 
 ## Style Prompt
 
-Design Agent Immune System launch assets as a developer-native diagnostic walkthrough: realistic Codex-first workflow, dark dense surfaces, crisp proof artifacts, and a tight incident-to-repair arc. The mood is not glossy AI magic; it is a credible engineer showing that bloated rules create measurable friction, then cleaning them in public.
+Design Agent Immune System launch assets as a developer-native diagnostic walkthrough shown on tangible devices: laptop screens, phone proof views, crisp vector diagrams, and a tight incident-to-repair arc. The mood is not glossy AI magic; it is a credible engineer showing that bloated rules create measurable friction, then cleaning them in public with visible proof.
 
 ## Color
 
-Use a dark technical base with restrained immune-system greens and high-contrast proof surfaces.
+Use a graphite technical base with warm paper proof surfaces and vivid repair/removal accents. Avoid the previous green-heavy palette.
 
-- Background: `oklch(18% 0.035 158)` near-black green.
-- Surface: `oklch(24% 0.035 158)` for panels and IDE chrome.
-- Raised surface: `oklch(31% 0.04 158)` for active cards and code panes.
-- Ink on dark: `oklch(95% 0.015 155)`.
-- Muted ink: `oklch(74% 0.04 158)`.
-- Diagnostic green: `oklch(74% 0.14 154)`.
-- Warning amber: `oklch(78% 0.13 78)`.
-- Deletion red: `oklch(72% 0.13 28)`.
-- Light proof surface: `oklch(97% 0.012 155)` with `oklch(18% 0.035 158)` text.
+- Background: `#151820` graphite.
+- Surface: `#1d222c` for IDE and device screens.
+- Raised surface: `#242b37` for active panes and chrome.
+- Ink on dark: `#fff7e8` warm paper.
+- Muted ink: `#c8ccd7`.
+- Repair teal: `#1ed7c2`.
+- Stack/context cobalt: `#3b5bdb`.
+- Warning amber: `#f5b84b`.
+- Deletion coral: `#ff5c45`.
+- Light proof surface: `#fff7e8` with `#151820` text.
 
-Avoid single-hue sameness by using amber for caution, red only for removed rules, and light proof surfaces for the final metric and reviewed artifacts.
+Avoid single-hue sameness by using teal only for repair, coral only for removed/harmful rules, amber for caution, cobalt for stack/system context, and warm paper for proof surfaces.
 
 ## Typography
 
@@ -40,6 +41,8 @@ Avoid defaulting to monospace as the whole brand. The brand is technical because
 ## Video Surface Rules
 
 - Codex is the primary screen and should look familiar: a left chat/work session, visible user prompt, agent output, command/output blocks, and a file/diff/proof pane.
+- Major UI surfaces should appear inside laptop or phone mockups, not as floating generic windows.
+- Include vector diagrams for immune-system concepts such as classification, routing, memory, and stack placement.
 - Claude Code, Cursor, and terminal appear as quick agnostic compatibility flashes, not separate full stories.
 - Use real workflow labels: `AGENTS.md`, `CLAUDE.md`, `SKILL.md`, `benchmark.json`, `git diff`, `Instruction Health Score`.
 - Include a stack-placement scene using a common developer-agent loop: Plan, Execute, Review, Test, Ship, Learn. Optional labels may reference GStack and GSD as examples of loop frameworks, but the visual should read as framework-agnostic.
@@ -60,7 +63,7 @@ Motion should feel like a polished product launch demo, not a slideshow. Use qui
 
 ## What Not To Do
 
-- Do not use floating generic SaaS cards.
+- Do not use floating generic SaaS cards or bare app windows when a laptop/phone mockup would make the workflow feel real.
 - Do not use decorative gradient blobs or abstract AI orbs.
 - Do not fake a complex product dashboard when a realistic Codex workflow is the story.
 - Do not make the IDE cycle so long that it dilutes the core Codex demo.
