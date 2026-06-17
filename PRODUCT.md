@@ -14,6 +14,8 @@ Agent Immune System helps users audit and repair long-term agent instruction hea
 
 Success means a technical viewer quickly understands the diagnosis: their agent rules may be making them slower, and this project gives them an inspectable way to clean those rules without blindly deleting safety guidance.
 
+It fits above the normal developer-agent loop rather than replacing it. In a GStack, GSD, or similar workflow, the loop still looks like plan, execute, review, test, ship, and learn. Agent Immune System sits on the instruction-health layer that feeds that loop: global rules, project rules, skills, memory reports, postmortems, hooks, and review findings. Its job is to prevent the learning layer from becoming drag.
+
 ## Brand Personality
 
 Diagnostic, credible, and a little provocative. The brand should feel like a senior engineer calmly showing why the system is sick, not like a generic AI productivity toy. It can use a sharp hook, but the proof must stay grounded in real files, diffs, outputs, and human approval.
@@ -33,6 +35,7 @@ Diagnostic, credible, and a little provocative. The brand should feel like a sen
 3. Keep humans in control: the tool proposes, the user reviews, then applies.
 4. Make agnosticism visible: briefly cycle through Claude Code, Codex, Cursor, and terminal use.
 5. Turn scar tissue into regeneration: the memorable payoff is cleaner principles replacing accumulated wounds.
+6. Show stack placement: Agent Immune System is a meta-layer that improves the loop users already have.
 
 ## Accessibility & Inclusion
 

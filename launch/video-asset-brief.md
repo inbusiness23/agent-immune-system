@@ -12,6 +12,8 @@ Model the video primarily after Linear's agent workflow demos: real work surface
 
 In about 60-90 seconds, show a real developer workflow where Agent Immune System audits bloated rules, proposes a cleaner instruction set, the user applies the patch, and the replay completes 40% faster in the included deterministic demo fixture.
 
+The video should also explain where the tool fits in the viewer's stack. Agent Immune System is not the coding agent, the IDE, or the project-management framework. It is the instruction-health layer that keeps GStack, GSD, Codex, Claude Code, Cursor, terminal hooks, skills, and memory reports from accumulating friction.
+
 ## Target Viewer
 
 A technical founder, maintainer, or agent-heavy developer who has been adding rules to `AGENTS.md`, `CLAUDE.md`, or skill files every time a session goes sideways and now suspects the rule pile is slowing the agent down.
@@ -28,7 +30,20 @@ A technical founder, maintainer, or agent-heavy developer who has been adding ru
    - Visual: realistic Codex chat with audit output.
    - Artifact: `Instruction Health Score`, findings, route decisions.
 
-3. **Show agnostic support**
+3. **Show where it fits**
+   - Visual: common developer-agent loop appears as kinetic type and connected surfaces:
+     - `Plan`
+     - `Execute`
+     - `Review`
+     - `Test`
+     - `Ship`
+     - `Learn`
+   - Supporting labels: `GStack`, `GSD`, `Codex`, `Claude Code`, `Cursor`, `Terminal`.
+   - Kinetic moment: `AGENT IMMUNE SYSTEM` drops into the instruction-health layer between `Learn/Postmortem` and `Active Instructions`.
+   - Visual effect: drag markers disappear, timing bars compress, the loop speeds up, and the next agent run has fewer interruptions.
+   - Text: "Fits above the loop. Makes the loop lighter."
+
+4. **Show agnostic support**
    - Quick cycle, 1-2 seconds each:
      - Claude Code: same command against `CLAUDE.md`.
      - Codex: same command against `AGENTS.md`.
@@ -36,19 +51,19 @@ A technical founder, maintainer, or agent-heavy developer who has been adding ru
      - Terminal: hook/script output from `hooks/codex-instruction-hook.sh check`.
    - Text: "Works wherever your agent rules live."
 
-4. **Human-approved repair**
+5. **Human-approved repair**
    - User prompt: `Apply the recommended instruction-health patch.`
    - Visual: before/after diff replaces narrow scar rules with durable principles.
    - Artifact: removed duplicate rules, demoted proof workflow detail, regenerated worktree principle.
 
-5. **Proof replay**
+6. **Proof replay**
    - Visual: side-by-side code/task run.
    - Before: 8:20, 5 interruptions, 3 duplicate clusters, 2 autoimmune rules.
    - After: 5:00, 1 interruption, 0 duplicate clusters, 0 autoimmune rules.
    - Text: "40% faster in the demo replay."
    - Disclosure: "Deterministic demo fixture, not a universal benchmark."
 
-6. **Open-source close**
+7. **Open-source close**
    - Text: "Inspect the fixture. Run it on your own rules."
    - CTA: `Use agent immune system to audit my AGENTS.md.`
 
@@ -58,6 +73,9 @@ A technical founder, maintainer, or agent-heavy developer who has been adding ru
 - `AGENTS.before.md` and `AGENTS.after.md` code panes.
 - Audit table with finding, route, and reason.
 - Diff panel with red removals and green regenerated principles.
+- Developer loop diagram with kinetic type: Plan, Execute, Review, Test, Ship, Learn.
+- Instruction-health layer diagram: `Postmortems`, `Memory`, `AGENTS.md`, `CLAUDE.md`, `skills/`, `hooks/`.
+- Framework labels for stack context: GStack, GSD, Claude Code, Codex, Cursor, Terminal.
 - Compatibility strip: Claude Code, Codex, Cursor, Terminal.
 - Benchmark fixture panel from `demo/workflow/benchmark.json`.
 - GitHub/open-source close frame.
@@ -69,6 +87,9 @@ A technical founder, maintainer, or agent-heavy developer who has been adding ru
 - "Audit the rules before you add another one."
 - "Detect bloat. Prevent autoimmunity. Regenerate cleaner instructions."
 - "Works with AGENTS.md, CLAUDE.md, skills, Cursor rules, and terminal hooks."
+- "Fits above your developer loop."
+- "GStack, GSD, Codex, Claude Code, Cursor, terminal: same instruction-health problem."
+- "Less prompt drag. Faster agent loops."
 - "Proposal-first. Human-approved. Open source."
 
 ## Visual Direction
@@ -80,6 +101,7 @@ Use realistic familiar Codex as the main environment. The supporting IDE/tool cy
 - Generic animated dashboard cards.
 - Abstract "AI magic" graphics.
 - Overlong multi-tool tour.
+- A framework comparison chart. This is about stack placement, not ranking GStack, GSD, Codex, Claude Code, or Cursor.
 - Claiming universal 40% speed improvement.
 - Showing fake outputs that cannot be traced back to repo fixtures.
 
@@ -90,6 +112,7 @@ Before rendering, the HyperFrames composition should include these checkpoints:
 - The first 5 seconds establish the pain and hook.
 - By second 15, the user has run the audit.
 - By second 30, the findings and route decisions are visible.
-- By second 42, the agnostic IDE/tool cycle has completed.
-- By second 60, the patch has been applied and the diff is visible.
+- By second 42, the stack-placement loop scene has shown where Agent Immune System fits.
+- By second 52, the agnostic IDE/tool cycle has completed.
+- By second 65, the patch has been applied and the diff is visible.
 - Final 15-20 seconds show benchmark proof and open-source CTA.

@@ -42,6 +42,8 @@ Avoid defaulting to monospace as the whole brand. The brand is technical because
 - Codex is the primary screen and should look familiar: a left chat/work session, visible user prompt, agent output, command/output blocks, and a file/diff/proof pane.
 - Claude Code, Cursor, and terminal appear as quick agnostic compatibility flashes, not separate full stories.
 - Use real workflow labels: `AGENTS.md`, `CLAUDE.md`, `SKILL.md`, `benchmark.json`, `git diff`, `Instruction Health Score`.
+- Include a stack-placement scene using a common developer-agent loop: Plan, Execute, Review, Test, Ship, Learn. Optional labels may reference GStack and GSD as examples of loop frameworks, but the visual should read as framework-agnostic.
+- Insert Agent Immune System as a kinetic type block between Learn/Postmortem and Active Instructions. The insertion should visibly reduce friction across the whole loop: fewer warning ticks, shorter timing bars, smoother loop motion, and faster completion pulse.
 - Every major claim needs an artifact on screen.
 - The 40% faster frame must remain explicitly scoped to the included deterministic demo fixture.
 
@@ -50,6 +52,7 @@ Avoid defaulting to monospace as the whole brand. The brand is technical because
 Motion should feel like a polished product launch demo, not a slideshow. Use quick but readable transitions:
 
 - Zoom into the active artifact when the user runs the audit.
+- Use kinetic type for the stack-placement moment: "POSTMORTEM", "MEMORY", "RULES", "SKILLS", then "AGENT IMMUNE SYSTEM" drops into the instruction layer and compresses the loop's drag markers.
 - Snap between IDE/tool surfaces in the agnostic cycle.
 - Use subtle scan/highlight motion to identify autoimmune rules.
 - Use side-by-side timing bars for the before/after benchmark.
