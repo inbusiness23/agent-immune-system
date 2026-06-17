@@ -6,9 +6,12 @@ Agent Immune System audits `AGENTS.md`, `CLAUDE.md`, `SKILL.md`, and project ins
 
 Launch demo:
 
-- [Rendered HyperFrames screenflow MP4](assets/video/agent-immune-system-screenflow.mp4)
-- [HyperFrames composition source](assets/hyperframes/agent-immune-screenflow/index.html)
+- [Rendered Codex workflow MP4](assets/video/agent-immune-codex-workflow.mp4)
+- [HyperFrames workflow source](assets/hyperframes/agent-immune-codex-workflow/index.html)
+- [Workflow fixture files](demo/workflow/)
 - [Static screenflow chat demo](assets/screenflow/chat-demo.html)
+
+The workflow demo shows a user running Agent Immune System inside a Codex chat, reviewing findings, applying the proposed patch, and comparing before/after code completion output. The 40% faster frame is based on the included deterministic demo fixture, not a universal performance guarantee.
 
 ```text
 Before: every painful agent mistake becomes another permanent rule.

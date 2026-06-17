@@ -1,0 +1,42 @@
+diff --git a/AGENTS.md b/AGENTS.md
+index before..after 100644
+--- a/AGENTS.md
++++ b/AGENTS.md
+@@ -1,31 +1,19 @@
+ # Agent Instructions
+ 
+-## Shell
++## Worktree Safety
+ 
+-- Never run commands without asking the user first.
+-- Always ask before reading files.
+-- Never inspect repo files unless the user gives explicit approval.
+-- Stop and ask before using `rg`.
++Before editing, confirm the worktree is safe: correct branch, writable Git metadata, no unrelated dirty changes, and no active writer collision.
+ 
+-## Git
++## Shell Safety
+ 
+-- Always check the branch before editing.
+-- Always verify git status before editing.
+-- Do not edit main.
+-- Stop if the worktree is dirty.
+-- Never touch unrelated files.
+-- Check for active sessions before edits.
+-- Do not continue if another agent might be in the same directory.
++Proceed with safe read-only discovery. Ask before destructive commands, external writes, credential access, or irreversible actions.
+ 
+-## Browser Proof
++## Visual Proof
+ 
+-- Always produce mobile browser proof for every visual change.
+-- Always create a gallery for screenshots.
+-- Always create a video proof bundle.
+-- Always use S1/V1/C1/R1 IDs for all review artifacts.
++Use browser or mobile proof when the user asks for visual evidence or when frontend changes need acceptance verification. Keep artifact ID conventions inside the proof-review workflow.
+ 
+ ## Session Learning
+ 
+-- If an agent makes a mistake, add a new permanent rule to this file.
+-- Never delete old rules unless David explicitly asks.
++Treat mistakes as evidence, not automatic permanent rules. Promote only repeated, damaging, generalizable lessons; otherwise route to watchlist, incident memory, reference, pruning, or regeneration.

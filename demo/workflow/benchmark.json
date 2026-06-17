@@ -1,0 +1,24 @@
+{
+  "benchmark_name": "demo_instruction_overhead_replay",
+  "purpose": "Show the workflow impact of pruning over-restrictive and duplicate agent instructions in a controlled demo replay.",
+  "task": "Implement a small README quick-start update after inspecting repo files.",
+  "before": {
+    "instruction_file": "demo/workflow/AGENTS.before.md",
+    "completion_time_seconds": 500,
+    "agent_interruptions": 5,
+    "duplicate_rule_clusters": 3,
+    "autoimmune_rules": 2
+  },
+  "after": {
+    "instruction_file": "demo/workflow/AGENTS.after.md",
+    "completion_time_seconds": 300,
+    "agent_interruptions": 1,
+    "duplicate_rule_clusters": 0,
+    "autoimmune_rules": 0
+  },
+  "improvement": {
+    "completion_time_reduction_percent": 40,
+    "agent_interruptions_reduction_percent": 80
+  },
+  "disclosure": "This is a deterministic launch-demo fixture, not a benchmark across all real repositories."
+}
