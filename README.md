@@ -104,7 +104,14 @@ Recommendation:
 Demote three incident-specific rules into dormant memory and replace them with one proportionality principle.
 ```
 
-See [`examples/`](examples/) for concrete cases.
+Concrete cases:
+
+- [Route a postmortem to a watchlist](examples/01-postmortem-to-watchlist.md)
+- [Prune a bloated AGENTS.md](examples/02-bloated-agents-md-pruning.md)
+- [Regenerate duplicate rules](examples/03-duplicate-rule-regeneration.md)
+- [Route narrow lessons to skills instead of global instructions](examples/04-skill-vs-global-routing.md)
+- [Detect an autoimmune instruction](examples/05-autoimmune-instruction-finding.md)
+- [Prune a stale tool-surface assumption](examples/06-linear-access-surface-pruning.md)
 
 ## Safety Model
 
